@@ -1,0 +1,27 @@
+{
+    "Publish Pricing": {
+        "topMenuText": "PRICING ENGINE",
+        "href": "/pe/pricing",
+        "pageTitle":"Product Pricing & Eligibility"
+    },
+    "Uploads": {
+        "topMenuText": "SELL",
+        "href": "/sell/uploads",
+        "pageTitle":"Uploads"
+    },
+    "Cart": {
+        "topMenuText": "SELL",
+        "href": "/sell/commitment_cart",
+        "pageTitle":"Commitment Cart"
+    },
+    "Notifications": {
+        "topMenuText": "N/A",
+        "href": "/company/notifications",
+        "pageTitle":"Notifications"
+    },
+    "Delivered": {
+        "topMenuText": "DELIVER",
+        "href": "/deliver/delivered",
+        "pageTitle":"Delivered"
+    }
+}
