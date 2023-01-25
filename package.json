@@ -1,0 +1,48 @@
+{
+  "name": "cypress-cucumber-framework",
+  "version": "1.0.0",
+  "description": "This project is for e2e and integration tests using cypress and cucumber",
+  "main": "index.js",
+  "scripts": {
+    "clean": "del-cli jsonLogs && del-cli cucumber-report.html",
+    "lint": "eslint ./cypress/**/*.js",
+    "cy:open": "cypress open --e2e --browser chrome",
+    "cy:run": "cypress run --browser chrome --spec cypress/e2e/features/*.feature",
+    "cy:local": "cypress run --browser chrome --spec cypress/e2e/features/smoke/smokeLocal.feature",
+    "cy:smoke": "cypress run --browser chrome --spec cypress/e2e/features/smoke/smoke.feature",
+    "cy:report": "node ./reporting/report.js"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "cucumber",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "cucumber-html-reporter": "^3.0.4",
+    "cypress": "^12.0.2",
+    "del-cli": "^5.0.0",
+    "eslint": "^8.29.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "prettier": "2.8.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "json": {
+      "enabled": true,
+      "formatter": "./jsonFormatter/cucumber-json-formatter",
+      "output": "jsonLogs/report.json"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "jsonLogs/messages.ndjson"
+    },
+    "html": {
+      "enabled": true
+    },
+    "stepDefinitions": [
+      "cypress/e2e/stepDefinitions/**/*.js"
+    ]
+  }
+}

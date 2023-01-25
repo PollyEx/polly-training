@@ -1,0 +1,19 @@
+# OS specific: Needs to be downloaded separately
+jsonFormatter/*
+
+# node libraries: use "npm install" to create
+node_modules
+
+# Test results
+cypress/videos
+cypress/screenshots
+jsonLogs
+cucumber-report.html
+cypress/fixtures/users.json
+
+# Feature files: to be downloaded from Jira at each test run
+cypress/e2e/features/*.feature
+
+# Mac OS stuff
+.DS_Store
+
