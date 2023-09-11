@@ -17,5 +17,14 @@
     "cypress": "^12.0.2",
     "del-cli": "^5.0.0",
     "eslint": "^8.29.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PollyEx/polly-training.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PollyEx/polly-training/issues"
+  },
+  "homepage": "https://github.com/PollyEx/polly-training#readme"
 }
