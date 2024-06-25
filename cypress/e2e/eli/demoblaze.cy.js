@@ -1,0 +1,23 @@
+describe('Browser Actions', () => {
+    it('Should Load the Demoblaze Website & Purchase a Macbook Air', () => {
+        cy.visit('https://www.demoblaze.com/index.html')
+        cy.url().should('include', 'index.html')
+        cy.get('a').contains('Laptops').click()
+        cy.wait(3000)
+        cy.get('a').contains('MacBook air').click()
+        cy.wait(3000)
+        cy.get('a').contains('Add to cart').click()
+        cy.wait(3000)
+        cy.visit('https://www.demoblaze.com/cart.html')
+        cy.url().should('include', 'cart.html')
+        cy.get('div').contains('Place Order').click()
+        cy.get('#name').type('Elii', {delay: 50})
+        cy.get('#country').type('United States of America', {delay: 50})
+        cy.get('#city').type('Yonkers', {delay: 50})
+        cy.get('#card').type('191443344780', {delay: 50})
+        cy.get('#month').type('October', {delay: 50})
+        cy.get('#year').type('2023', {delay: 50})
+        cy.get('div').contains('Purchase').click()
+    })
+
+})
